@@ -1,23 +1,71 @@
 aid: ballislife
+
 name: Ballislife
-description: 'Ballislife is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://dsz7vodgjx60a.cloudfront.net/wp-content/uploads/2024/04/01095139/post-placeholder.jpg
+
+description: Ballislife.com is a basketball media platform offering news, highlights, player profiles, and community content for fans. It serves
+  as a one‑stop shop for everything basketball, featuring articles, videos, and interactive features that engage the basketball community.
+
 url: https://raw.githubusercontent.com/api-evangelist/ballislife/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Sports
+- Media
+- Basketball
+- Community
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/ballislife-llms.txt
+- type: WellKnown
+  url: well-known/ballislife-well-known.yml
+- type: Hosts
+  url: hosts/ballislife-hosts.yml
+- type: Vendors
+  url: vendors/ballislife-vendors.yml
+- type: TermsOfService
+  url: https://ballislife.com/tos/
+- type: SignUp
+  url: https://ballislife.com/betting/bonus/sign-up/
+- type: PrivacyPolicy
+  url: https://ballislife.com/privacy-policy/
+- type: Pricing
+  url: https://ballislife.com/price-upsets-17-hs-team-in-the-country-sierra-canyon/
+- type: Newsroom
+  url: https://ballislife.com/news/
+- type: DomainSecurity
+  url: security/ballislife-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://ballislife.com/
+
+apis:
+- name: Ballislife API
+  description: GraphQL API endpoint discovered at shop.ballislife.com, but ownership could not be verified as belonging to Ballislife.
+  aid: ballislife:ballislife-api
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
